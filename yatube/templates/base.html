@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+
+<head>
+{% include 'includes/header.html' %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>{% block title %}{% endblock %}</title>
+    <!-- Загрузка статики -->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+</head>
+
+<body>
+
+    <main>
+        <div class="container">
+            <h1>{% block header %}{% endblock %}</h1>
+            {% block content %}
+            <!-- Содержимое страницы -->
+            {% endblock %}
+        </div>
+    </main>
+    {% include 'includes/footer.html' %}
+</body>
+
+</html>
